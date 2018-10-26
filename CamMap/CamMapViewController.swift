@@ -74,6 +74,22 @@ public class CamMapViewController: UIViewController {
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateVideoPreviewLayerSize()
+
+        // Roundness
+        captureButton.layer.cornerRadius = 0.5 * captureButton.bounds.size.width
+        captureButton.clipsToBounds = true
+        captureButton.backgroundColor = UIColor.gray
+        captureButton.alpha = 0.9
+
+        let cameraImage = ImageUtils.loadImage(named: "camera")
+        captureButton.setImage(cameraImage, for: .normal)
+
+        // Shadow
+        captureButton.layer.shadowColor = UIColor.black.cgColor
+        captureButton.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        captureButton.layer.masksToBounds = false
+        captureButton.layer.shadowRadius = 5.0
+        captureButton.layer.shadowOpacity = 0.3
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -169,8 +185,7 @@ public class CamMapViewController: UIViewController {
 
     func setupButtons() {
         // Buttons
-        captureButton = UIButton(type: .system)
-        captureButton.setTitle("Capture", for: .normal)
+        captureButton = UIButton(type: .custom)
         captureButton.addTarget(self, action: #selector(takePicture(_:)), for: .touchUpInside)
 
         completeButton = UIButton(type: .system)
@@ -210,14 +225,14 @@ public class CamMapViewController: UIViewController {
             centerMapPin.heightAnchor.constraint(equalToConstant: 35),
 
             captureButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -30),
-            captureButton.widthAnchor.constraint(equalToConstant: 100),
-            captureButton.heightAnchor.constraint(equalToConstant: 35),
+            captureButton.widthAnchor.constraint(equalToConstant: 60),
+            captureButton.heightAnchor.constraint(equalToConstant: 60),
             captureButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
 
-            completeButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -30),
+            completeButton.centerYAnchor.constraint(equalTo: self.captureButton.centerYAnchor),
             completeButton.widthAnchor.constraint(equalToConstant: 100),
             completeButton.heightAnchor.constraint(equalToConstant: 35),
-            completeButton.leftAnchor.constraint(equalTo: self.captureButton.rightAnchor, constant: 30),
+            completeButton.leftAnchor.constraint(equalTo: self.captureButton.rightAnchor, constant: 35),
         ]
 
         landscapeConstrains = [
@@ -237,14 +252,14 @@ public class CamMapViewController: UIViewController {
             centerMapPin.heightAnchor.constraint(equalToConstant: 35),
 
             captureButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -30),
-            captureButton.widthAnchor.constraint(equalToConstant: 100),
-            captureButton.heightAnchor.constraint(equalToConstant: 35),
+            captureButton.widthAnchor.constraint(equalToConstant: 60),
+            captureButton.heightAnchor.constraint(equalToConstant: 60),
             captureButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
 
-            completeButton.topAnchor.constraint(equalTo: self.captureButton.bottomAnchor, constant: 30),
+            completeButton.centerXAnchor.constraint(equalTo: self.captureButton.centerXAnchor),
             completeButton.widthAnchor.constraint(equalToConstant: 100),
             completeButton.heightAnchor.constraint(equalToConstant: 35),
-            completeButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -30),
+            completeButton.topAnchor.constraint(equalTo: self.captureButton.bottomAnchor, constant: 40),
         ]
     }
 
@@ -263,6 +278,15 @@ public class CamMapViewController: UIViewController {
 
     @objc
     func takePicture(_: Any) {
+        // First animate the action
+        UIView.animate(withDuration: 0.2, animations: {
+            self.captureButton.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.2) {
+                self.captureButton.transform = CGAffineTransform.identity
+            }
+        })
+
         // Make sure capturePhotoOutput is valid
         guard let capturePhotoOutput = self.capturePhotoOutput else { return }
         // Get an instance of AVCapturePhotoSettings class
