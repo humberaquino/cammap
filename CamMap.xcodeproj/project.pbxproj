@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53DD53D3BBCBFD42C2327A7C /* libPods-CamMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C4505CD3AC7DD8ADC75E09 /* libPods-CamMapTests.a */; };
 		57F0ED7D21834A800044E781 /* CamMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F0ED7321834A800044E781 /* CamMap.framework */; };
 		57F0ED8221834A800044E781 /* CamMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0ED8121834A800044E781 /* CamMapTests.swift */; };
 		57F0ED8421834A800044E781 /* CamMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F0ED7621834A800044E781 /* CamMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57F0ED8E21834B430044E781 /* CamMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0ED8D21834B430044E781 /* CamMapViewController.swift */; };
+		BF93779D3B082E30F6E29963 /* libPods-CamMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EDD269B507AA318252FA1B /* libPods-CamMap.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19EF770B69070E7095B75DC3 /* Pods-CamMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-CamMap/Pods-CamMap.release.xcconfig"; sourceTree = "<group>"; };
 		57F0ED7321834A800044E781 /* CamMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CamMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F0ED7621834A800044E781 /* CamMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CamMap.h; sourceTree = "<group>"; };
 		57F0ED7721834A800044E781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57F0ED7C21834A800044E781 /* CamMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F0ED8121834A800044E781 /* CamMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamMapTests.swift; sourceTree = "<group>"; };
 		57F0ED8321834A800044E781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57F0ED8D21834B430044E781 /* CamMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamMapViewController.swift; sourceTree = "<group>"; };
+		6FD07C076857EB4A24B71AC6 /* Pods-CamMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CamMap/Pods-CamMap.debug.xcconfig"; sourceTree = "<group>"; };
+		A2C4505CD3AC7DD8ADC75E09 /* libPods-CamMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CamMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1EDD269B507AA318252FA1B /* libPods-CamMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CamMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD215F48B57E42DB20AF37DB /* Pods-CamMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CamMapTests/Pods-CamMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDA46E54E827AC52EA5BEE04 /* Pods-CamMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CamMapTests/Pods-CamMapTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF93779D3B082E30F6E29963 /* libPods-CamMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +55,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				57F0ED7D21834A800044E781 /* CamMap.framework in Frameworks */,
+				53DD53D3BBCBFD42C2327A7C /* libPods-CamMapTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C6125459ADAE05DBDE892C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1EDD269B507AA318252FA1B /* libPods-CamMap.a */,
+				A2C4505CD3AC7DD8ADC75E09 /* libPods-CamMapTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		57F0ED6921834A800044E781 = {
 			isa = PBXGroup;
 			children = (
 				57F0ED7521834A800044E781 /* CamMap */,
 				57F0ED8021834A800044E781 /* CamMapTests */,
 				57F0ED7421834A800044E781 /* Products */,
+				A7ADF036A2243EAC0F8FA865 /* Pods */,
+				0C6125459ADAE05DBDE892C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +94,7 @@
 		57F0ED7521834A800044E781 /* CamMap */ = {
 			isa = PBXGroup;
 			children = (
+				57F0ED8D21834B430044E781 /* CamMapViewController.swift */,
 				57F0ED7621834A800044E781 /* CamMap.h */,
 				57F0ED7721834A800044E781 /* Info.plist */,
 			);
@@ -84,6 +108,17 @@
 				57F0ED8321834A800044E781 /* Info.plist */,
 			);
 			path = CamMapTests;
+			sourceTree = "<group>";
+		};
+		A7ADF036A2243EAC0F8FA865 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FD07C076857EB4A24B71AC6 /* Pods-CamMap.debug.xcconfig */,
+				19EF770B69070E7095B75DC3 /* Pods-CamMap.release.xcconfig */,
+				FD215F48B57E42DB20AF37DB /* Pods-CamMapTests.debug.xcconfig */,
+				FDA46E54E827AC52EA5BEE04 /* Pods-CamMapTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57F0ED8721834A800044E781 /* Build configuration list for PBXNativeTarget "CamMap" */;
 			buildPhases = (
+				1EA6F2F09D1EF488A8D2FC7B /* [CP] Check Pods Manifest.lock */,
 				57F0ED6E21834A800044E781 /* Headers */,
 				57F0ED6F21834A800044E781 /* Sources */,
 				57F0ED7021834A800044E781 /* Frameworks */,
@@ -122,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57F0ED8A21834A800044E781 /* Build configuration list for PBXNativeTarget "CamMapTests" */;
 			buildPhases = (
+				DA6A2AB6F96663DB0E8E13D1 /* [CP] Check Pods Manifest.lock */,
 				57F0ED7821834A800044E781 /* Sources */,
 				57F0ED7921834A800044E781 /* Frameworks */,
 				57F0ED7A21834A800044E781 /* Resources */,
@@ -148,6 +185,7 @@
 				TargetAttributes = {
 					57F0ED7221834A800044E781 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					57F0ED7B21834A800044E781 = {
 						CreatedOnToolsVersion = 10.0;
@@ -189,11 +227,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EA6F2F09D1EF488A8D2FC7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CamMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA6A2AB6F96663DB0E8E13D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CamMapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57F0ED6F21834A800044E781 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F0ED8E21834B430044E781 /* CamMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +426,9 @@
 		};
 		57F0ED8821834A800044E781 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD07C076857EB4A24B71AC6 /* Pods-CamMap.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.humberaquino.CamMap;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +454,9 @@
 		};
 		57F0ED8921834A800044E781 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EF770B69070E7095B75DC3 /* Pods-CamMap.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -390,7 +481,9 @@
 		};
 		57F0ED8B21834A800044E781 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD215F48B57E42DB20AF37DB /* Pods-CamMapTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67458Y5PZQ;
 				INFOPLIST_FILE = CamMapTests/Info.plist;
@@ -408,7 +501,9 @@
 		};
 		57F0ED8C21834A800044E781 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA46E54E827AC52EA5BEE04 /* Pods-CamMapTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67458Y5PZQ;
 				INFOPLIST_FILE = CamMapTests/Info.plist;
