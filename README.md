@@ -1,8 +1,8 @@
-# CamMap
+# 📷+🗺+⚡️ = CamMap
 
 CamMap is a swift library that helps apps take photos and grab locations at the same time.
 
-## Features
+## Features 🚀
 
 - [x] Capture images as JPEG
 - [x] Use the current location as soon as possible.
@@ -11,7 +11,7 @@ CamMap is a swift library that helps apps take photos and grab locations at the 
 - [x] Store photos in the device. Provide a configurable flag to turn it off.
 - [x] Handle portrait and landscape nicely.
 
-# Installation
+# Installation 💻
 
 ## Using [CocoaPods](http://cocoapods.org/)
 
@@ -22,7 +22,7 @@ use_frameworks!
 pod 'CamMap'
 ```
 
-# Roadmap
+# Roadmap 🏁
 
 - [ ] Better action buttons
 - [ ] Indicate how many photos were taken
