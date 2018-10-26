@@ -13,7 +13,9 @@ CamMap is a swift library that helps apps take photos and grab locations at the 
 
 # Installation 💻
 
-## Using [CocoaPods](http://cocoapods.org/)
+Soon 👻
+
+### Using [CocoaPods](http://cocoapods.org/)
 
 Add `pod 'CamMap'` to your `Podfile` and run `pod install`. Also add `use_frameworks!` to the `Podfile`.
 
