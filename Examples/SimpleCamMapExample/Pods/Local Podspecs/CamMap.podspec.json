@@ -1,0 +1,28 @@
+{
+  "name": "CamMap",
+  "version": "0.0.1",
+  "summary": "Take photos fast while specifying a location in the map",
+  "description": "CamMap aims at taking photos with location fast.",
+  "homepage": "https://github.com/humberaquino/CamMap",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Humberto Aquino": "humberaquino@gmail.com"
+  },
+  "social_media_url": "http://twitter.com/goku2",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "https://github.com/humberaquino/CamMap.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "CamMap/**/*.{swift}",
+  "swift_version": "4.2",
+  "frameworks": [
+    "UIKit",
+    "MapKit"
+  ]
+}

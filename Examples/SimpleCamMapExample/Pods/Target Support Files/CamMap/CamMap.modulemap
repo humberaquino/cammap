@@ -1,0 +1,6 @@
+framework module CamMap {
+  umbrella header "CamMap-umbrella.h"
+
+  export *
+  module * { export * }
+}

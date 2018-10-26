@@ -11,7 +11,7 @@ import Foundation
 import MapKit
 import UIKit
 
-class CamMapViewController: UIViewController {
+public class CamMapViewController: UIViewController {
     var captureSession: AVCaptureSession!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
 
@@ -28,7 +28,7 @@ class CamMapViewController: UIViewController {
 
     var capturePhotoOutput: AVCapturePhotoOutput!
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         mapView = MKMapView()
@@ -130,7 +130,7 @@ class CamMapViewController: UIViewController {
         }
     }
 
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateVideoPreviewLayerSize()
     }
@@ -139,7 +139,7 @@ class CamMapViewController: UIViewController {
         videoPreviewLayer.frame = previewView.bounds
     }
 
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         // Update camera orientation
         let videoOrientation: AVCaptureVideoOrientation
@@ -163,7 +163,7 @@ class CamMapViewController: UIViewController {
 }
 
 extension CamMapViewController: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_: AVCapturePhotoOutput,
+    private func photoOutput(_: AVCapturePhotoOutput,
                      didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?,
                      previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
                      resolvedSettings _: AVCaptureResolvedPhotoSettings,
