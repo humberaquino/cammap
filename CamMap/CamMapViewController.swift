@@ -24,6 +24,7 @@ public enum CamMapError: Error {
     case locationFailed(Error)
     case photoJPEGFailed
     case imageDataTransformation
+    case cantSaveImage(Error?)
 }
 
 public enum PermType {
@@ -34,7 +35,8 @@ public enum PermType {
 
 public class CamMapViewController: UIViewController {
     // Params
-    var regionRadius: CLLocationDistance = 400
+    public var regionRadius: CLLocationDistance = 400
+    public var shouldStorePhotos = true
 
     // Map and Location
     var locationManager = CLLocationManager()
@@ -341,6 +343,19 @@ extension CamMapViewController: AVCapturePhotoCaptureDelegate {
 
         images.append(image)
         markCompleteState()
+
+        if shouldStorePhotos {
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
+    }
+
+    @objc func image(_: UIImage, didFinishSavingWithError error: NSError?, contextInfo _: UnsafeRawPointer) {
+        if let error = error {
+            delegate?.camMapHadFailure(error: CamMapError.cantSaveImage(error as Error))
+            return
+        }
+
+        // TODO: Show some indication that the image got saved
     }
 }
 
