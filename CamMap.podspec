@@ -108,7 +108,8 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "CamMap/Media.xcassets"
+  s.ios.resource_bundle = { 'CamMap' => 'CamMap/**/*.xcassets' }
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

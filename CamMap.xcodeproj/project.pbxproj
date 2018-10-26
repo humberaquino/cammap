@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		53DD53D3BBCBFD42C2327A7C /* libPods-CamMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C4505CD3AC7DD8ADC75E09 /* libPods-CamMapTests.a */; };
+		57B4AF9A21836FD700559123 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B4AF9921836FD700559123 /* Media.xcassets */; };
+		57B4AF9C2183935100559123 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AF9B2183935100559123 /* ImageUtils.swift */; };
+		57B4AF9E2183999000559123 /* UIViewContoller+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4AF9D2183999000559123 /* UIViewContoller+Utils.swift */; };
 		57F0ED7D21834A800044E781 /* CamMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F0ED7321834A800044E781 /* CamMap.framework */; };
 		57F0ED8221834A800044E781 /* CamMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F0ED8121834A800044E781 /* CamMapTests.swift */; };
 		57F0ED8421834A800044E781 /* CamMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F0ED7621834A800044E781 /* CamMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		19EF770B69070E7095B75DC3 /* Pods-CamMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-CamMap/Pods-CamMap.release.xcconfig"; sourceTree = "<group>"; };
+		57B4AF9921836FD700559123 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		57B4AF9B2183935100559123 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		57B4AF9D2183999000559123 /* UIViewContoller+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+Utils.swift"; sourceTree = "<group>"; };
 		57F0ED7321834A800044E781 /* CamMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CamMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F0ED7621834A800044E781 /* CamMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CamMap.h; sourceTree = "<group>"; };
 		57F0ED7721834A800044E781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,8 +101,11 @@
 			isa = PBXGroup;
 			children = (
 				57F0ED8D21834B430044E781 /* CamMapViewController.swift */,
+				57B4AF9B2183935100559123 /* ImageUtils.swift */,
+				57B4AF9D2183999000559123 /* UIViewContoller+Utils.swift */,
 				57F0ED7621834A800044E781 /* CamMap.h */,
 				57F0ED7721834A800044E781 /* Info.plist */,
+				57B4AF9921836FD700559123 /* Media.xcassets */,
 			);
 			path = CamMap;
 			sourceTree = "<group>";
@@ -215,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B4AF9A21836FD700559123 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				57F0ED8E21834B430044E781 /* CamMapViewController.swift in Sources */,
+				57B4AF9C2183935100559123 /* ImageUtils.swift in Sources */,
+				57B4AF9E2183999000559123 /* UIViewContoller+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,135 +11,85 @@ import Foundation
 import MapKit
 import UIKit
 
+public protocol CamMapDelegate: class {
+    func camMapDidComplete(images: [UIImage], location: CLLocationCoordinate2D?)
+    func camMapDidCancel()
+    func camMapHadFailure(error: CamMapError)
+    func camMapPermissionFailure(type: PermType, details: String)
+}
+
+public enum CamMapError: Error {
+    case noVideo
+    case cantStartCapture(Error)
+    case locationFailed(Error)
+    case photoJPEGFailed
+    case imageDataTransformation
+}
+
+public enum PermType {
+    case location
+    case camera
+    case photos
+}
+
 public class CamMapViewController: UIViewController {
+    // Params
+    var regionRadius: CLLocationDistance = 400
+
+    // Map and Location
+    var locationManager = CLLocationManager()
+    var mapView: MKMapView!
+    var zoomLevel: Float = 14.0
+    var selectedCoordinate: CLLocationCoordinate2D?
+    var centerMapPin: UIImageView!
+
+    // Camera
+    var previewView: UIView!
     var captureSession: AVCaptureSession!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    var capturePhotoOutput: AVCapturePhotoOutput!
+    var images: [UIImage] = []
 
-    var mapHeight: CGFloat = 250
-
-    var stackView: UIStackView!
-    var previewView: UIView!
-    var mapView: MKMapView!
-
+    // Actions
     var captureButton: UIButton!
+    var completeButton: UIButton!
 
+    // Layout
     var protraitConstrains: [NSLayoutConstraint]!
     var landscapeConstrains: [NSLayoutConstraint]!
 
-    var capturePhotoOutput: AVCapturePhotoOutput!
+    // Delegate
+    public weak var delegate: CamMapDelegate?
 
-    override public func viewDidLoad() {
+    // MARK: - Life cycle
+
+    public override func viewDidLoad() {
         super.viewDidLoad()
-
-        mapView = MKMapView()
-        previewView = UIView()
-
-        view.backgroundColor = UIColor.white
-        guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
-            print("Can't capture device: video")
-            return
-        }
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-
-            captureSession = AVCaptureSession()
-            captureSession.addInput(input)
-
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            videoPreviewLayer.videoGravity = .resizeAspectFill
-            previewView.layer.addSublayer(videoPreviewLayer)
-
-            captureSession.startRunning()
-        } catch {
-            print(error)
-        }
-
-        captureButton = UIButton(type: .system)
-        captureButton.setTitle("Capture", for: .normal)
-        captureButton.addTarget(self, action: #selector(takePicture(_:)), for: .touchUpInside)
-
-        view.addSubview(mapView)
-        view.addSubview(previewView)
-        view.addSubview(captureButton)
-
-        configureContraints()
-        updateLayoutConstraints()
-
-        // Get an instance of ACCapturePhotoOutput class
-        capturePhotoOutput = AVCapturePhotoOutput()
-        capturePhotoOutput?.isHighResolutionCaptureEnabled = true
-        // Set the output on the capture session
-        captureSession?.addOutput(capturePhotoOutput)
+        setupUI()
+        setupLocationManager()
     }
 
-    func configureContraints() {
-        mapView.translatesAutoresizingMaskIntoConstraints = false
-        previewView.translatesAutoresizingMaskIntoConstraints = false
-        captureButton.translatesAutoresizingMaskIntoConstraints = false
-
-        protraitConstrains = [
-            mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            mapView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            mapView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.30),
-
-            previewView.topAnchor.constraint(equalTo: self.mapView.bottomAnchor),
-            previewView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            previewView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            previewView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-        ]
-
-        landscapeConstrains = [
-            mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            mapView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.30),
-
-            previewView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            previewView.leftAnchor.constraint(equalTo: self.mapView.rightAnchor),
-            previewView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            previewView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-        ]
-    }
-
-    @objc
-    func takePicture(_: Any) {
-        print("Take pic")
-
-        // Make sure capturePhotoOutput is valid
-        guard let capturePhotoOutput = self.capturePhotoOutput else { return }
-        // Get an instance of AVCapturePhotoSettings class
-        let photoSettings = AVCapturePhotoSettings()
-        // Set photo settings for our need
-        photoSettings.isAutoStillImageStabilizationEnabled = true
-        photoSettings.isHighResolutionPhotoEnabled = true
-        photoSettings.flashMode = .off
-        // Call capturePhoto method by passing our photo settings and a
-        // delegate implementing AVCapturePhotoCaptureDelegate
-        capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
-    }
-
-    func updateLayoutConstraints() {
-        let portrait = UIDevice.current.orientation != .landscapeLeft && UIDevice.current.orientation != .landscapeRight
-        if portrait {
-            NSLayoutConstraint.deactivate(landscapeConstrains)
-            NSLayoutConstraint.activate(protraitConstrains)
-        } else {
-            NSLayoutConstraint.deactivate(protraitConstrains)
-            NSLayoutConstraint.activate(landscapeConstrains)
-        }
-    }
-
-    override public func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateVideoPreviewLayerSize()
     }
 
-    func updateVideoPreviewLayerSize() {
-        videoPreviewLayer.frame = previewView.bounds
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Only request is location is not selected
+        if selectedCoordinate != nil {
+            return
+        }
+
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        if let location = locationManager.location {
+            centerMapOnLocation(location: location)
+        }
     }
 
-    override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         // Update camera orientation
         let videoOrientation: AVCaptureVideoOrientation
@@ -160,33 +110,319 @@ public class CamMapViewController: UIViewController {
         // Update view constraints
         updateLayoutConstraints()
     }
+
+    // MARK: - Setup UI
+
+    func setupUI() {
+        setupMap()
+        setupCamera()
+        setupButtons()
+
+        configureViewsAndConstrains()
+        updateLayoutConstraints()
+    }
+
+    func setupMap() {
+        // Map
+        mapView = MKMapView()
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+
+        let image = ImageUtils.loadImage(named: "drop-pin")
+        centerMapPin = UIImageView(image: image)
+        centerMapPin.isUserInteractionEnabled = true
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(centerMapPinTapped(_:)))
+        centerMapPin.addGestureRecognizer(tapRecognizer)
+    }
+
+    func setupCamera() {
+        // Camera
+        previewView = UIView()
+        guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
+            delegate?.camMapHadFailure(error: CamMapError.noVideo)
+            return
+        }
+
+        do {
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+
+            captureSession = AVCaptureSession()
+            captureSession.addInput(input)
+
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            videoPreviewLayer.videoGravity = .resizeAspectFill
+            previewView.layer.addSublayer(videoPreviewLayer)
+
+            captureSession.startRunning()
+
+            // Get an instance of ACCapturePhotoOutput
+            capturePhotoOutput = AVCapturePhotoOutput()
+            capturePhotoOutput.isHighResolutionCaptureEnabled = true
+            // Set the output on the capture session
+            captureSession.addOutput(capturePhotoOutput)
+        } catch {
+            delegate?.camMapHadFailure(error: CamMapError.cantStartCapture(error))
+        }
+    }
+
+    func setupButtons() {
+        // Buttons
+        captureButton = UIButton(type: .system)
+        captureButton.setTitle("Capture", for: .normal)
+        captureButton.addTarget(self, action: #selector(takePicture(_:)), for: .touchUpInside)
+
+        completeButton = UIButton(type: .system)
+        completeButton.setTitle("Cancel", for: .normal)
+        completeButton.addTarget(self, action: #selector(completeAction(_:)), for: .touchUpInside)
+    }
+
+    func configureViewsAndConstrains() {
+        view.addSubview(centerMapPin)
+        view.addSubview(mapView)
+        view.addSubview(previewView)
+        view.addSubview(captureButton)
+        view.addSubview(completeButton)
+        view.bringSubviewToFront(centerMapPin)
+
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        previewView.translatesAutoresizingMaskIntoConstraints = false
+        captureButton.translatesAutoresizingMaskIntoConstraints = false
+
+        centerMapPin.translatesAutoresizingMaskIntoConstraints = false
+        completeButton.translatesAutoresizingMaskIntoConstraints = false
+
+        protraitConstrains = [
+            mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            mapView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.30),
+
+            previewView.topAnchor.constraint(equalTo: self.mapView.bottomAnchor),
+            previewView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            previewView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            previewView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+
+            centerMapPin.centerXAnchor.constraint(equalTo: self.mapView.centerXAnchor),
+            centerMapPin.centerYAnchor.constraint(equalTo: self.mapView.centerYAnchor),
+            centerMapPin.widthAnchor.constraint(equalToConstant: 35),
+            centerMapPin.heightAnchor.constraint(equalToConstant: 35),
+
+            captureButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -30),
+            captureButton.widthAnchor.constraint(equalToConstant: 100),
+            captureButton.heightAnchor.constraint(equalToConstant: 35),
+            captureButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+
+            completeButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -30),
+            completeButton.widthAnchor.constraint(equalToConstant: 100),
+            completeButton.heightAnchor.constraint(equalToConstant: 35),
+            completeButton.leftAnchor.constraint(equalTo: self.captureButton.rightAnchor, constant: 30),
+        ]
+
+        landscapeConstrains = [
+            mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            mapView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.30),
+
+            previewView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            previewView.leftAnchor.constraint(equalTo: self.mapView.rightAnchor),
+            previewView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            previewView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+
+            centerMapPin.centerXAnchor.constraint(equalTo: self.mapView.centerXAnchor),
+            centerMapPin.centerYAnchor.constraint(equalTo: self.mapView.centerYAnchor),
+            centerMapPin.widthAnchor.constraint(equalToConstant: 35),
+            centerMapPin.heightAnchor.constraint(equalToConstant: 35),
+
+            captureButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -30),
+            captureButton.widthAnchor.constraint(equalToConstant: 100),
+            captureButton.heightAnchor.constraint(equalToConstant: 35),
+            captureButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+
+            completeButton.topAnchor.constraint(equalTo: self.captureButton.bottomAnchor, constant: 30),
+            completeButton.widthAnchor.constraint(equalToConstant: 100),
+            completeButton.heightAnchor.constraint(equalToConstant: 35),
+            completeButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -30),
+        ]
+    }
+
+    func updateLayoutConstraints() {
+        let portrait = UIDevice.current.orientation != .landscapeLeft && UIDevice.current.orientation != .landscapeRight
+        if portrait {
+            NSLayoutConstraint.deactivate(landscapeConstrains)
+            NSLayoutConstraint.activate(protraitConstrains)
+        } else {
+            NSLayoutConstraint.deactivate(protraitConstrains)
+            NSLayoutConstraint.activate(landscapeConstrains)
+        }
+    }
+
+    // MARK: - Actions
+
+    @objc
+    func takePicture(_: Any) {
+        // Make sure capturePhotoOutput is valid
+        guard let capturePhotoOutput = self.capturePhotoOutput else { return }
+        // Get an instance of AVCapturePhotoSettings class
+        let photoSettings = AVCapturePhotoSettings()
+        // Set photo settings for our need
+        photoSettings.isAutoStillImageStabilizationEnabled = true
+        photoSettings.isHighResolutionPhotoEnabled = true
+        photoSettings.flashMode = .off
+        // Call capturePhoto method by passing our photo settings and a
+        // delegate implementing AVCapturePhotoCaptureDelegate
+        capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
+    }
+
+    @objc
+    func completeAction(_: Any) {
+        if images.count == 0 {
+            delegate?.camMapDidCancel()
+        } else {
+            let selectedLocation = identifySelectedLocation()
+            delegate?.camMapDidComplete(images: images, location: selectedLocation)
+        }
+    }
+
+    @objc
+    func centerMapPinTapped(_: UIGestureRecognizer) {
+        locationManager.stopUpdatingLocation()
+
+        // Get the center of the map in coordiantes
+        let center = mapView.centerCoordinate
+
+        // Remove the image
+        centerMapPin.isUserInteractionEnabled = false
+        centerMapPin.isHidden = true
+
+        // Place a Marker
+        selectedCoordinate = center
+
+        let annotation = MKPointAnnotation()
+
+        annotation.coordinate = selectedCoordinate!
+        mapView.addAnnotation(annotation)
+
+        centerMapOnLocation(location: CLLocation(latitude: center.latitude, longitude: center.longitude))
+    }
+
+    // MARK: - Utils
+
+    func identifySelectedLocation() -> CLLocationCoordinate2D {
+        guard let selectedCoordinate = self.selectedCoordinate else {
+            return mapView.centerCoordinate
+        }
+        return selectedCoordinate
+    }
+
+    func updateVideoPreviewLayerSize() {
+        videoPreviewLayer.frame = previewView.bounds
+    }
+
+    func markCompleteState() {
+        completeButton.setTitle("Done", for: .normal)
+    }
 }
 
-extension CamMapViewController: AVCapturePhotoCaptureDelegate {
-    private func photoOutput(_: AVCapturePhotoOutput,
-                     didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?,
-                     previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
-                     resolvedSettings _: AVCaptureResolvedPhotoSettings,
-                     bracketSettings _: AVCaptureBracketedStillImageSettings?,
-                     error: Error?) {
-        // get captured image
+// MARK: - AVCapturePhotoCaptureDelegate
 
-        // Make sure we get some photo sample buffer
-        guard error == nil,
-            let photoSampleBuffer = photoSampleBuffer else {
-            print("Error capturing photo: \(String(describing: error))")
+extension CamMapViewController: AVCapturePhotoCaptureDelegate {
+    public func photoOutput(_: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error _: Error?) {
+        guard let imageData = photo.fileDataRepresentation() else {
+            delegate?.camMapHadFailure(error: CamMapError.photoJPEGFailed)
             return
         }
-        // Convert photo same buffer to a jpeg image data by using // AVCapturePhotoOutput
-        guard let imageData =
-            AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else {
-            return
-        }
-        // Initialise a UIImage with our image data
+
         let capturedImage = UIImage(data: imageData, scale: 1.0)
-        if let image = capturedImage {
-            // Save our captured image to photos album
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        guard let image = capturedImage else {
+            delegate?.camMapHadFailure(error: CamMapError.imageDataTransformation)
+            return
         }
+
+        images.append(image)
+        markCompleteState()
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension CamMapViewController: CLLocationManagerDelegate {
+    func setupLocationManager() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 50
+    }
+
+    public func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations.last!
+        centerMapOnLocation(location: location)
+        locationManager.stopUpdatingLocation()
+    }
+
+    // Handle authorization for the location manager
+    public func locationManager(_: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted:
+            delegate?.camMapPermissionFailure(type: .location, details: "Location access was restricted.")
+        case .denied:
+            delegate?.camMapPermissionFailure(type: .location, details: "User denied access to location.")
+            mapView.isHidden = false
+        case .notDetermined:
+            delegate?.camMapPermissionFailure(type: .location, details: "Location status not determined.")
+        default:
+            // No op
+            break
+        }
+    }
+
+    // Handle location manager errors.
+    public func locationManager(_: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        delegate?.camMapHadFailure(error: CamMapError.locationFailed(error))
+    }
+
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+
+    func replaceMarkerWithSelectedCoordiante() {
+        guard let selectedCoordinate = selectedCoordinate else { return }
+
+        mapView.removeAnnotations(mapView.annotations)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = selectedCoordinate
+        mapView.addAnnotation(annotation)
+    }
+}
+
+// MARK: - MKMapViewDelegate
+
+extension CamMapViewController: MKMapViewDelegate {
+    public func mapView(_: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState _: MKAnnotationView.DragState) {
+        switch newState {
+        case .starting:
+            view.dragState = .dragging
+        case .ending, .canceling:
+            view.dragState = .none
+        default: break
+        }
+    }
+
+    public func mapView(_: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKPointAnnotation {
+            let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "locationPin")
+
+            pinAnnotationView.isDraggable = true
+            pinAnnotationView.canShowCallout = true
+            pinAnnotationView.animatesDrop = true
+
+            return pinAnnotationView
+        }
+
+        return nil
     }
 }

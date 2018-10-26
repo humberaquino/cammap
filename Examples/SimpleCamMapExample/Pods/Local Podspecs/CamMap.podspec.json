@@ -21,6 +21,12 @@
   },
   "source_files": "CamMap/**/*.{swift}",
   "swift_version": "4.2",
+  "resources": "CamMap/Media.xcassets",
+  "ios": {
+    "resource_bundles": {
+      "CamMap": "CamMap/**/*.xcassets"
+    }
+  },
   "frameworks": [
     "UIKit",
     "MapKit"
