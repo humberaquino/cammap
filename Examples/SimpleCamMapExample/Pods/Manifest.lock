@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "~/Documents/Libraries/CamMap"
 
 SPEC CHECKSUMS:
-  CamMap: 673affc2b386b0ef315285dfb72b09e65f8978db
+  CamMap: 6e2f1f12e970ef27b87a9ec529831f7648bd3c1d
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
 PODFILE CHECKSUM: 77ac3954afee46632cfae3be3681306bea38caea

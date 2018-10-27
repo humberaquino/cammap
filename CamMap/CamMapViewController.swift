@@ -55,6 +55,7 @@ public class CamMapViewController: UIViewController {
     // Actions
     var captureButton: UIButton!
     var completeButton: UIButton!
+    var imageCountView: ImageCountView!
 
     // Layout
     var protraitConstrains: [NSLayoutConstraint]!
@@ -191,6 +192,8 @@ public class CamMapViewController: UIViewController {
         completeButton = UIButton(type: .system)
         completeButton.setTitle("Cancel", for: .normal)
         completeButton.addTarget(self, action: #selector(completeAction(_:)), for: .touchUpInside)
+
+        imageCountView = ImageCountView()
     }
 
     func configureViewsAndConstrains() {
@@ -199,6 +202,8 @@ public class CamMapViewController: UIViewController {
         view.addSubview(previewView)
         view.addSubview(captureButton)
         view.addSubview(completeButton)
+        view.addSubview(imageCountView)
+
         view.bringSubviewToFront(centerMapPin)
 
         mapView.translatesAutoresizingMaskIntoConstraints = false
@@ -207,6 +212,7 @@ public class CamMapViewController: UIViewController {
 
         centerMapPin.translatesAutoresizingMaskIntoConstraints = false
         completeButton.translatesAutoresizingMaskIntoConstraints = false
+        imageCountView.translatesAutoresizingMaskIntoConstraints = false
 
         protraitConstrains = [
             mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
@@ -230,9 +236,14 @@ public class CamMapViewController: UIViewController {
             captureButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
 
             completeButton.centerYAnchor.constraint(equalTo: self.captureButton.centerYAnchor),
-            completeButton.widthAnchor.constraint(equalToConstant: 100),
             completeButton.heightAnchor.constraint(equalToConstant: 35),
-            completeButton.leftAnchor.constraint(equalTo: self.captureButton.rightAnchor, constant: 35),
+            completeButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -40),
+            completeButton.leftAnchor.constraint(equalTo: self.captureButton.rightAnchor, constant: 40),
+
+            imageCountView.centerYAnchor.constraint(equalTo: self.captureButton.centerYAnchor),
+            imageCountView.widthAnchor.constraint(equalToConstant: 50),
+            imageCountView.heightAnchor.constraint(equalToConstant: 50),
+            imageCountView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 55),
         ]
 
         landscapeConstrains = [
@@ -260,6 +271,11 @@ public class CamMapViewController: UIViewController {
             completeButton.widthAnchor.constraint(equalToConstant: 100),
             completeButton.heightAnchor.constraint(equalToConstant: 35),
             completeButton.topAnchor.constraint(equalTo: self.captureButton.bottomAnchor, constant: 40),
+
+            imageCountView.centerXAnchor.constraint(equalTo: self.captureButton.centerXAnchor),
+            imageCountView.widthAnchor.constraint(equalToConstant: 50),
+            imageCountView.heightAnchor.constraint(equalToConstant: 50),
+            imageCountView.bottomAnchor.constraint(equalTo: self.captureButton.topAnchor, constant: -40),
         ]
     }
 
@@ -367,6 +383,8 @@ extension CamMapViewController: AVCapturePhotoCaptureDelegate {
 
         images.append(image)
         markCompleteState()
+
+        imageCountView.updateWith(image: image, count: images.count)
 
         if shouldStorePhotos {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)

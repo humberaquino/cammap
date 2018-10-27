@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E9425557F9B5E625961B5C53E651CA /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C58D90E5EE83F80DB3039AEA55603 /* ImageUtils.swift */; };
+		03A9C313AFC912BD287CCD692AFF48DC /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297FF45E62BB744923BF38E1C99DD91C /* Media.xcassets */; };
 		0404B2BD0B7961A2F18E4BFF25E683CF /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FAD1ED522B9041959ED19ED6B3DE /* Constraint.swift */; };
-		05669405CEEE4E0BED4F3E3D6A1B2199 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C307A0D23BAC8D8770F9C8F7DF3914D1 /* Media.xcassets */; };
-		0B3D1B38907405767639C3583E6C94CF /* CamMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7CC60BECBA57FB1310FE34206A14F46 /* CamMap.bundle */; };
+		11E590AA32A66300423C08F1D863A76B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1899DF19920E20BF9EE667803725971 /* UIKit.framework */; };
 		13BEDCE5A51E1211B6429CE7154975B5 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155B0F68F55650AB9DA3EB802B75CFE0 /* ConstraintConstantTarget.swift */; };
-		15DD4924B8B1DF6C855D8714066A98AD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C307A0D23BAC8D8770F9C8F7DF3914D1 /* Media.xcassets */; };
+		189177C08D9F96DD9B44F8C71EBE49A3 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297FF45E62BB744923BF38E1C99DD91C /* Media.xcassets */; };
+		23C00D7DC46A8711164840431685AF4B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E061A876F428A8E8C9F0CD173365A7 /* MapKit.framework */; };
 		25C3A55A11957DCECFB33FD71F1AE6FF /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A91D0ACFB6CF1883A820AA2607BCA8 /* ConstraintView.swift */; };
 		2BB0AC0F3247D6B463C3BE1682A56ADB /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465909C1E34108C63AB5FBA6378D3493 /* LayoutConstraint.swift */; };
 		303DC6549F4795D57D465EF11E2073B5 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C4EE941C99C2F663494C43944D63FD /* ConstraintConfig.swift */; };
-		30B51E1763C2A3A72C4EBA962445B06F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E061A876F428A8E8C9F0CD173365A7 /* MapKit.framework */; };
 		33349F0B387B09DA2E72DAC3277DB10D /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4D5D85B4FAEB4C7AF868A3E48121 /* ConstraintMakerPriortizable.swift */; };
 		365CF610B56553FDB399CC18D291D670 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F2ED3CDAE5D2928456AF5EDDDE4257 /* Foundation.framework */; };
 		3682DA602AC237460BC376F4105CF187 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B73C67F9EFC99A11440EE4069211B84A /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DCEF25295D34A3E32C315A05E1E71A1 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE14A5BE5AA8350526F042EBC920BAA /* ConstraintLayoutSupport.swift */; };
 		44027138AE94F265396A4CBD4B260F86 /* Pods-SimpleCamMapExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA6BFCC1EC1B99BD16F6487B322820 /* Pods-SimpleCamMapExample-dummy.m */; };
 		44FAE91C22ADBD4089E74471F74D5021 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E03888824F0BC09BC4827577C35087 /* Debugging.swift */; };
-		451CDC959FB420253ECDF191C3B0D295 /* CamMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3490187D6F0772C2B178C67FC80911 /* CamMapViewController.swift */; };
 		4544C2C3E1AF8D71131BF6AC48422E5A /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9297EFDA2A228BE0D126B13FEC2B2AC1 /* ConstraintInsets.swift */; };
 		52049E298E6EE9D61C4B87462F4206ED /* Pods-SimpleCamMapExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65220FA244D706B0F9D67156A96BE4C7 /* Pods-SimpleCamMapExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A82D396DA48735ECBC678DE1A5D0B7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1899DF19920E20BF9EE667803725971 /* UIKit.framework */; };
+		52B48C148F5E3AC95876C23CDF384467 /* CamMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7CC60BECBA57FB1310FE34206A14F46 /* CamMap.bundle */; };
+		5B4F0B40FB60E99CDDE9994CF04B113C /* CamMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D9A4AEE7AA98012D9B67AAEFCC91CF /* CamMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		669377DFC5F3E7AED4FB39682A8995BC /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FAAF2F13CE5B667DCA58EF782CF6D /* ConstraintLayoutGuide.swift */; };
-		6EA992C645A172EB73323465D1E25423 /* CamMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E597F654BBC6B4DC4B01BA4CAF1CD /* CamMap-dummy.m */; };
 		764FE63FA2F017E986C77499302CD613 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495F3260249C5CD5E62E6D02610A41D /* ConstraintPriorityTarget.swift */; };
 		77232DA6F41F305C687244026E19277A /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068A4C41AD3E035EFFE7E7F568CE1EF9 /* ConstraintLayoutGuideDSL.swift */; };
 		774ECABEC4943B673750CE81A1535851 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B953D578152B8ABC94EDF5E0C6A43 /* LayoutConstraintItem.swift */; };
@@ -35,13 +35,11 @@
 		7DD34C051E21A20F4675AFF8E7150804 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645061FD8BF394AC613CF4F0D51EEE0B /* ConstraintDSL.swift */; };
 		837A0F63CA8B6671F54B1AF29A2B25CC /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC67A9344FB011AC6B0CB0B1706C1C /* ConstraintLayoutSupportDSL.swift */; };
 		83E48F0A2C98A73BC833D71C8FC41A41 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE3DCD5A18E652A9D4C4FCC6AEAE10 /* ConstraintMakerEditable.swift */; };
-		8B3F7A843F59AB45CC0BFE0C81652F21 /* UIViewContoller+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2BF0829F84DD93CD0547A112BC2CA /* UIViewContoller+Utils.swift */; };
-		9001A44D2157AA60A2D0A030F004DAF1 /* CamMap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C5E464C264FD761CF256A98C83F970 /* CamMap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88EF7009B937A8EADD607CDB47B655E3 /* CamMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013460AA37E237605AAAC697D6A671F /* CamMapViewController.swift */; };
 		9C194E3768FB322DF203BAEAF4D928A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F2ED3CDAE5D2928456AF5EDDDE4257 /* Foundation.framework */; };
 		9DFD0F9BDB3E3DB6B2A65A241BD16468 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618BA51B32ACF0F8F31A11BACEF95396 /* ConstraintMultiplierTarget.swift */; };
 		B1199BB321809B8F25F868B23F69F0DD /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC9D64458AB89596AC989C36546AE0 /* Typealiases.swift */; };
 		B27A6102E854A5502AA627A8D8CF6963 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB1C88D7583A855F149230ABA2DF3C8 /* ConstraintRelatableTarget.swift */; };
-		B28583A0A8BD359FF79E8FA6522AEDC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F2ED3CDAE5D2928456AF5EDDDE4257 /* Foundation.framework */; };
 		B6745BFDE5FE163942B09F9AF2D12591 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAC0AC855EFDB998E84AB91F91FC4CA /* ConstraintInsetTarget.swift */; };
 		BA35C7141E5E9F577C6AEFF46DA40908 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F75E7EE36678F81FD1EC4247DB1B87 /* ConstraintMakerFinalizable.swift */; };
 		BA744FEE342B8A1325D812E27AAA6951 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BDCD0CDEC036E08EBEFEBDB5217C5A /* ConstraintView+Extensions.swift */; };
@@ -50,22 +48,25 @@
 		C7ACB79208DA24ED746A09F176CAB084 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B058F739089B32F3323418933731ADFB /* ConstraintViewDSL.swift */; };
 		C7C4987B5908698892B5B65BB3DFCCC0 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1FE61DC3251BBA5CD452BE8564C8E7 /* ConstraintMaker.swift */; };
 		CA1DF88ED65F693EB959A9AB80D5A384 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F1F08ED6F3C072E7AC9154FBDC8C4E /* SnapKit-dummy.m */; };
+		CBA306EA27A910256F5C1AA0F886A0B4 /* UIViewContoller+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86F082E4B55F74663160AC97C74237 /* UIViewContoller+Utils.swift */; };
 		CE508885B65C588B03832BF8F35FF763 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3A931CDC4FB0563592274ED61655C7 /* ConstraintPriority.swift */; };
 		CFC90885D487817F3CAE7AFB466B114E /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45908992EEDBCFF12244DAE9912F7228 /* UILayoutSupport+Extensions.swift */; };
 		DA1DC3DF7CD8AFEF99E781C7DA8DCAB5 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35E795A4705B4FB474FF417682335F1 /* ConstraintMakerExtendable.swift */; };
 		DC186C2B14532F816A326C3EFB8D7AE3 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3463E11A1205B5C35B599F4A19C31C3 /* ConstraintOffsetTarget.swift */; };
 		E32F869115775E172B52CF3318B1EDEF /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97CEFB74800C4A5F04ED11A13D33D5 /* ConstraintItem.swift */; };
 		E3F3EA68C7811987CCFBA69DBAAC239A /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39EF6D4C8D8F847461613349A75E07 /* ConstraintDescription.swift */; };
+		E930D3757939D94E711C64F9E930B6C8 /* CamMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A1869D2C90587F8957F452766C660 /* CamMap-dummy.m */; };
 		EAE1057A57205C31E1CE4FD1F9B71F6B /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130FD3420568BD4A44BC6359400E0A8 /* ConstraintLayoutGuide+Extensions.swift */; };
-		FD0303EF52609CDD2E2DC411AC32DF27 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A6A0B43ADC26B638453A250F1459EA /* ImageUtils.swift */; };
+		EE4DCDF83C89A0463B35EC2D4BEDC70E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F2ED3CDAE5D2928456AF5EDDDE4257 /* Foundation.framework */; };
+		FCEAAB9FE287E528C392B9F03EB3BF38 /* ImageCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313FA9362665ABB42A8BEDA04C21C162 /* ImageCountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		13E24D8B9DA342CE806E5679EC612A7A /* PBXContainerItemProxy */ = {
+		36157AD08448765477C98044C3516581 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4771FC2D02E446FEE00EC6C064E80BBB;
+			remoteGlobalIDString = 2E2EB1ECFCB05F867C94D8C59F65D1A3;
 			remoteInfo = "CamMap-CamMap";
 		};
 		5E42559227736C38EDBC86261049AEB9 /* PBXContainerItemProxy */ = {
@@ -79,25 +80,29 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 166E6AA8EC97445A134A2FCB57AEC521;
+			remoteGlobalIDString = EF1191501BE2593DC9210216FE78EAFB;
 			remoteInfo = CamMap;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0013460AA37E237605AAAC697D6A671F /* CamMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CamMapViewController.swift; path = CamMap/CamMapViewController.swift; sourceTree = "<group>"; };
 		068A4C41AD3E035EFFE7E7F568CE1EF9 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		07C5E464C264FD761CF256A98C83F970 /* CamMap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CamMap-umbrella.h"; sourceTree = "<group>"; };
+		074A1869D2C90587F8957F452766C660 /* CamMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CamMap-dummy.m"; sourceTree = "<group>"; };
 		0AF518E3C1EEA98354E7A1BB1CEC881B /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		11084A6BA20780B0A92EE054D45AD2B7 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
 		1130FD3420568BD4A44BC6359400E0A8 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		155B0F68F55650AB9DA3EB802B75CFE0 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		17E061A876F428A8E8C9F0CD173365A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		1C3A931CDC4FB0563592274ED61655C7 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
+		1FEA3D678F53C63E87814B6D015949FF /* CamMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CamMap.xcconfig; sourceTree = "<group>"; };
 		2057A81225328642D0E49115C61C8897 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		23C4EE941C99C2F663494C43944D63FD /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		2798FAD1ED522B9041959ED19ED6B3DE /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		297FF45E62BB744923BF38E1C99DD91C /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = CamMap/Media.xcassets; sourceTree = "<group>"; };
 		2DE798BEA5F78784ECFE687850645248 /* Pods-SimpleCamMapExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleCamMapExample-frameworks.sh"; sourceTree = "<group>"; };
 		30976966660C57EB07E019A3CFB1E62A /* Pods-SimpleCamMapExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleCamMapExample.release.xcconfig"; sourceTree = "<group>"; };
+		313FA9362665ABB42A8BEDA04C21C162 /* ImageCountView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCountView.swift; path = CamMap/ImageCountView.swift; sourceTree = "<group>"; };
 		35A91D0ACFB6CF1883A820AA2607BCA8 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
 		3803E7B541DB99A934981D4ED8E42645 /* Pods-SimpleCamMapExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleCamMapExample.modulemap"; sourceTree = "<group>"; };
 		3A39EF6D4C8D8F847461613349A75E07 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
@@ -105,39 +110,37 @@
 		45908992EEDBCFF12244DAE9912F7228 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		465909C1E34108C63AB5FBA6378D3493 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		48CE3DCD5A18E652A9D4C4FCC6AEAE10 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		4D3490187D6F0772C2B178C67FC80911 /* CamMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CamMapViewController.swift; path = CamMap/CamMapViewController.swift; sourceTree = "<group>"; };
-		4FB75B04D3B4DE870C4489D504ADC056 /* CamMap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CamMap.modulemap; sourceTree = "<group>"; };
-		508E597F654BBC6B4DC4B01BA4CAF1CD /* CamMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CamMap-dummy.m"; sourceTree = "<group>"; };
 		50DA6BFCC1EC1B99BD16F6487B322820 /* Pods-SimpleCamMapExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleCamMapExample-dummy.m"; sourceTree = "<group>"; };
 		5495F3260249C5CD5E62E6D02610A41D /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		55F1F08ED6F3C072E7AC9154FBDC8C4E /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		56F2ED3CDAE5D2928456AF5EDDDE4257 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5A1A33B96BC40DAC41113D41253F592A /* Pods-SimpleCamMapExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleCamMapExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		5DB8507D50C93279D7279BF895FF44A2 /* ResourceBundle-CamMap-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CamMap-Info.plist"; sourceTree = "<group>"; };
 		5DF390435D40F81E626583A7D490D754 /* Pods-SimpleCamMapExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleCamMapExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5FAC0AC855EFDB998E84AB91F91FC4CA /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 		618BA51B32ACF0F8F31A11BACEF95396 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		645061FD8BF394AC613CF4F0D51EEE0B /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		65220FA244D706B0F9D67156A96BE4C7 /* Pods-SimpleCamMapExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleCamMapExample-umbrella.h"; sourceTree = "<group>"; };
 		7453E067E807C980DDBE05635F81F604 /* Pods-SimpleCamMapExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleCamMapExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8800A0BD81B3B82A397DCD1B7D369CEB /* CamMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CamMap.xcconfig; sourceTree = "<group>"; };
+		87DEBD198B6CA3266BE5561BD50A7C6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		8A0A4D5D85B4FAEB4C7AF868A3E48121 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		927A515846DD440633F7214E6B37F6A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92818977325E0DC2D2DDB196DEC9759B /* CamMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CamMap.framework; path = CamMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9297EFDA2A228BE0D126B13FEC2B2AC1 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		92EC67A9344FB011AC6B0CB0B1706C1C /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1B4B79AE2CE4DCECEBFF8EBC34FF4C2 /* CamMap-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CamMap-prefix.pch"; sourceTree = "<group>"; };
 		AF5FAAF2F13CE5B667DCA58EF782CF6D /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		B034A2D7C8F41F19BC337C57D015E540 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		B058F739089B32F3323418933731ADFB /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		B5C9CEB30AA71EB58B5CD53321954DE0 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		B7124F9E5026683057D4E1CE270A6E6A /* ResourceBundle-CamMap-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CamMap-Info.plist"; sourceTree = "<group>"; };
 		B73C67F9EFC99A11440EE4069211B84A /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		B8BDCD0CDEC036E08EBEFEBDB5217C5A /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		B9A6A0B43ADC26B638453A250F1459EA /* ImageUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageUtils.swift; path = CamMap/ImageUtils.swift; sourceTree = "<group>"; };
-		C224552E2DFE211565524C9928E8B685 /* CamMap.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CamMap.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C307A0D23BAC8D8770F9C8F7DF3914D1 /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = CamMap/Media.xcassets; sourceTree = "<group>"; };
 		C40D59588C7D56E3680F4B15440A4F5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5D9A4AEE7AA98012D9B67AAEFCC91CF /* CamMap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CamMap-umbrella.h"; sourceTree = "<group>"; };
+		C5DD88AEB12E5E32D0463DD3B56F0A34 /* CamMap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CamMap.modulemap; sourceTree = "<group>"; };
 		C670F733BD7C518B27A8D9F5E51D7AB5 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C733181C7D9B84312CECA7EAAB20168C /* Pods_SimpleCamMapExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleCamMapExample.framework; path = "Pods-SimpleCamMapExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE86F082E4B55F74663160AC97C74237 /* UIViewContoller+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+Utils.swift"; sourceTree = "<group>"; };
 		D09C8BFD80A7988D3B139768116EE2A7 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		D1899DF19920E20BF9EE667803725971 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D3463E11A1205B5C35B599F4A19C31C3 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
@@ -146,15 +149,15 @@
 		D6E03888824F0BC09BC4827577C35087 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		DA17F2D7F42352672F30A144E51AC809 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		DBE14A5BE5AA8350526F042EBC920BAA /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		DC3BE39443629B96EEA652BF25042054 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		DD97CEFB74800C4A5F04ED11A13D33D5 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		DE821B647974C3BEF0801C37E7DF248B /* CamMap-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CamMap-prefix.pch"; sourceTree = "<group>"; };
 		E7CC60BECBA57FB1310FE34206A14F46 /* CamMap.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CamMap.bundle; path = "CamMap-CamMap.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB1C88D7583A855F149230ABA2DF3C8 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		EEC1C0925B7A75C47F90DA4CD473E0A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2C2BF0829F84DD93CD0547A112BC2CA /* UIViewContoller+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewContoller+Utils.swift"; path = "CamMap/UIViewContoller+Utils.swift"; sourceTree = "<group>"; };
+		F1B77FB15BB5908C9795D6DC47CBDF94 /* CamMap.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CamMap.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F3F75E7EE36678F81FD1EC4247DB1B87 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		F53E8EA091CF109F24E0339C2A66161E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CD504810BBECC400047B04C47823A7 /* Pods-SimpleCamMapExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleCamMapExample-resources.sh"; sourceTree = "<group>"; };
+		FC8C58D90E5EE83F80DB3039AEA55603 /* ImageUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		FE1FE61DC3251BBA5CD452BE8564C8E7 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,20 +170,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C85A32C36185A83C5C34C0AB037FC105 /* Frameworks */ = {
+		7035E288875925FB81B7453C15D0245A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4DCDF83C89A0463B35EC2D4BEDC70E /* Foundation.framework in Frameworks */,
+				23C00D7DC46A8711164840431685AF4B /* MapKit.framework in Frameworks */,
+				11E590AA32A66300423C08F1D863A76B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D49E4D74B4FD3A9E084CA200177FC8C0 /* Frameworks */ = {
+		83AAB767DB11B9743B2F3D714972D873 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28583A0A8BD359FF79E8FA6522AEDC5 /* Foundation.framework in Frameworks */,
-				30B51E1763C2A3A72C4EBA962445B06F /* MapKit.framework in Frameworks */,
-				5A82D396DA48735ECBC678DE1A5D0B7F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +201,7 @@
 		076D1844FDC9EA8F78CE0F2D7680FFB3 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				380C5C675BBE9BC32A54E6EEEE5DFEAC /* CamMap */,
+				DA8309C1530D605471D9BF6AB6A4C240 /* CamMap */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -229,6 +232,16 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		284A6DEA92C1000E3B79A7A6DD9423B6 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F1B77FB15BB5908C9795D6DC47CBDF94 /* CamMap.podspec */,
+				B034A2D7C8F41F19BC337C57D015E540 /* LICENSE */,
+				87DEBD198B6CA3266BE5561BD50A7C6A /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		29040F099E221D6752826143E7528B5A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,20 +249,6 @@
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
-		};
-		380C5C675BBE9BC32A54E6EEEE5DFEAC /* CamMap */ = {
-			isa = PBXGroup;
-			children = (
-				4D3490187D6F0772C2B178C67FC80911 /* CamMapViewController.swift */,
-				B9A6A0B43ADC26B638453A250F1459EA /* ImageUtils.swift */,
-				F2C2BF0829F84DD93CD0547A112BC2CA /* UIViewContoller+Utils.swift */,
-				EAB8B03BBD5C0F1CCFD760FFAEF845BB /* Pod */,
-				A66CA854B9452D34F6603FF2DF31CE74 /* Resources */,
-				8069C188229C150DFE133928F5CC3901 /* Support Files */,
-			);
-			name = CamMap;
-			path = /Users/humber/Documents/Libraries/CamMap;
-			sourceTree = "<absolute>";
 		};
 		432313F4618A6E0D54282078B6A48A1B /* Support Files */ = {
 			isa = PBXGroup;
@@ -265,6 +264,16 @@
 			path = "../Target Support Files/SnapKit";
 			sourceTree = "<group>";
 		};
+		642C00F2E1B19D1D145B61905B88C1B7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C58D90E5EE83F80DB3039AEA55603 /* ImageUtils.swift */,
+				CE86F082E4B55F74663160AC97C74237 /* UIViewContoller+Utils.swift */,
+			);
+			name = Utils;
+			path = CamMap/Utils;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -277,19 +286,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		8069C188229C150DFE133928F5CC3901 /* Support Files */ = {
+		951C88BC25899E3CEBEB569076E34575 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4FB75B04D3B4DE870C4489D504ADC056 /* CamMap.modulemap */,
-				8800A0BD81B3B82A397DCD1B7D369CEB /* CamMap.xcconfig */,
-				508E597F654BBC6B4DC4B01BA4CAF1CD /* CamMap-dummy.m */,
-				DE821B647974C3BEF0801C37E7DF248B /* CamMap-prefix.pch */,
-				07C5E464C264FD761CF256A98C83F970 /* CamMap-umbrella.h */,
-				927A515846DD440633F7214E6B37F6A9 /* Info.plist */,
-				B7124F9E5026683057D4E1CE270A6E6A /* ResourceBundle-CamMap-Info.plist */,
+				297FF45E62BB744923BF38E1C99DD91C /* Media.xcassets */,
 			);
-			name = "Support Files";
-			path = "Examples/SimpleCamMapExample/Pods/Target Support Files/CamMap";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		A33B4306132C2C300438CBCF0AB84DCB /* Pods-SimpleCamMapExample */ = {
@@ -308,14 +310,6 @@
 			);
 			name = "Pods-SimpleCamMapExample";
 			path = "Target Support Files/Pods-SimpleCamMapExample";
-			sourceTree = "<group>";
-		};
-		A66CA854B9452D34F6603FF2DF31CE74 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C307A0D23BAC8D8770F9C8F7DF3914D1 /* Media.xcassets */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		ACE3CBBE2C7163F9C96209ED44FA75D0 /* SnapKit */ = {
@@ -372,13 +366,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EAB8B03BBD5C0F1CCFD760FFAEF845BB /* Pod */ = {
+		DA8309C1530D605471D9BF6AB6A4C240 /* CamMap */ = {
 			isa = PBXGroup;
 			children = (
-				C224552E2DFE211565524C9928E8B685 /* CamMap.podspec */,
-				DC3BE39443629B96EEA652BF25042054 /* LICENSE */,
+				0013460AA37E237605AAAC697D6A671F /* CamMapViewController.swift */,
+				313FA9362665ABB42A8BEDA04C21C162 /* ImageCountView.swift */,
+				284A6DEA92C1000E3B79A7A6DD9423B6 /* Pod */,
+				951C88BC25899E3CEBEB569076E34575 /* Resources */,
+				FA8154EE35AE683828817A36785F1585 /* Support Files */,
+				642C00F2E1B19D1D145B61905B88C1B7 /* Utils */,
 			);
-			name = Pod;
+			name = CamMap;
+			path = /Users/humber/Documents/Libraries/CamMap;
+			sourceTree = "<absolute>";
+		};
+		FA8154EE35AE683828817A36785F1585 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5DD88AEB12E5E32D0463DD3B56F0A34 /* CamMap.modulemap */,
+				1FEA3D678F53C63E87814B6D015949FF /* CamMap.xcconfig */,
+				074A1869D2C90587F8957F452766C660 /* CamMap-dummy.m */,
+				A1B4B79AE2CE4DCECEBFF8EBC34FF4C2 /* CamMap-prefix.pch */,
+				C5D9A4AEE7AA98012D9B67AAEFCC91CF /* CamMap-umbrella.h */,
+				F53E8EA091CF109F24E0339C2A66161E /* Info.plist */,
+				5DB8507D50C93279D7279BF895FF44A2 /* ResourceBundle-CamMap-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Examples/SimpleCamMapExample/Pods/Target Support Files/CamMap";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,36 +414,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD748A61EEF8EABE060E9DC44A10ACF8 /* Headers */ = {
+		B69AB821D9FE9B9D11F5EFBCDD71FDD7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9001A44D2157AA60A2D0A030F004DAF1 /* CamMap-umbrella.h in Headers */,
+				5B4F0B40FB60E99CDDE9994CF04B113C /* CamMap-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		166E6AA8EC97445A134A2FCB57AEC521 /* CamMap */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5D75152A64873969AD71BA145C825064 /* Build configuration list for PBXNativeTarget "CamMap" */;
-			buildPhases = (
-				AD748A61EEF8EABE060E9DC44A10ACF8 /* Headers */,
-				92D0500EE8F4E934EBC3E39EB6D13D41 /* Sources */,
-				D49E4D74B4FD3A9E084CA200177FC8C0 /* Frameworks */,
-				217FE8EFC22F30B0B5659DE1A513BC3C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE9EC7F16E98385C7390A29EB3EFDBDD /* PBXTargetDependency */,
-			);
-			name = CamMap;
-			productName = CamMap;
-			productReference = 92818977325E0DC2D2DDB196DEC9759B /* CamMap.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		17E4AD6DBEAA9385A7624DB0E944AA89 /* Pods-SimpleCamMapExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B1E8AE3C3EE6D982C29AAF98EFF03B3 /* Build configuration list for PBXNativeTarget "Pods-SimpleCamMapExample" */;
@@ -450,13 +445,13 @@
 			productReference = C733181C7D9B84312CECA7EAAB20168C /* Pods_SimpleCamMapExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4771FC2D02E446FEE00EC6C064E80BBB /* CamMap-CamMap */ = {
+		2E2EB1ECFCB05F867C94D8C59F65D1A3 /* CamMap-CamMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83B7A9FCCBA83E21860B2A4E64F95FFC /* Build configuration list for PBXNativeTarget "CamMap-CamMap" */;
+			buildConfigurationList = 238C74DFFF4DCBBE3849202C03452320 /* Build configuration list for PBXNativeTarget "CamMap-CamMap" */;
 			buildPhases = (
-				51E4B9CA887D3A6AEFE8CF34ADFDFA63 /* Sources */,
-				C85A32C36185A83C5C34C0AB037FC105 /* Frameworks */,
-				1CC72E3936CE75A6DD6DFF09F7446186 /* Resources */,
+				D7CDA9B361463EBE2BE314A8C0ECB488 /* Sources */,
+				83AAB767DB11B9743B2F3D714972D873 /* Frameworks */,
+				1F5BAB310C94DDA3757929AB83A2CE9D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -485,6 +480,25 @@
 			productReference = C670F733BD7C518B27A8D9F5E51D7AB5 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EF1191501BE2593DC9210216FE78EAFB /* CamMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B93AAB766B57A71617D094CD80D0D3A /* Build configuration list for PBXNativeTarget "CamMap" */;
+			buildPhases = (
+				B69AB821D9FE9B9D11F5EFBCDD71FDD7 /* Headers */,
+				14AC29CFD75F5EED411127FBA827779B /* Sources */,
+				7035E288875925FB81B7453C15D0245A /* Frameworks */,
+				DD37F1458BA0C6A3576D07563DD2D605 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B733AF43F2466C9C9F14B18F94EE182B /* PBXTargetDependency */,
+			);
+			name = CamMap;
+			productName = CamMap;
+			productReference = 92818977325E0DC2D2DDB196DEC9759B /* CamMap.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -506,8 +520,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				166E6AA8EC97445A134A2FCB57AEC521 /* CamMap */,
-				4771FC2D02E446FEE00EC6C064E80BBB /* CamMap-CamMap */,
+				EF1191501BE2593DC9210216FE78EAFB /* CamMap */,
+				2E2EB1ECFCB05F867C94D8C59F65D1A3 /* CamMap-CamMap */,
 				17E4AD6DBEAA9385A7624DB0E944AA89 /* Pods-SimpleCamMapExample */,
 				A1EEEAD72E9053A471132D36082D5CBC /* SnapKit */,
 			);
@@ -515,20 +529,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1CC72E3936CE75A6DD6DFF09F7446186 /* Resources */ = {
+		1F5BAB310C94DDA3757929AB83A2CE9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15DD4924B8B1DF6C855D8714066A98AD /* Media.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		217FE8EFC22F30B0B5659DE1A513BC3C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B3D1B38907405767639C3583E6C94CF /* CamMap.bundle in Resources */,
-				05669405CEEE4E0BED4F3E3D6A1B2199 /* Media.xcassets in Resources */,
+				03A9C313AFC912BD287CCD692AFF48DC /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,9 +551,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD37F1458BA0C6A3576D07563DD2D605 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B48C148F5E3AC95876C23CDF384467 /* CamMap.bundle in Resources */,
+				189177C08D9F96DD9B44F8C71EBE49A3 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		14AC29CFD75F5EED411127FBA827779B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E930D3757939D94E711C64F9E930B6C8 /* CamMap-dummy.m in Sources */,
+				88EF7009B937A8EADD607CDB47B655E3 /* CamMapViewController.swift in Sources */,
+				FCEAAB9FE287E528C392B9F03EB3BF38 /* ImageCountView.swift in Sources */,
+				02E9425557F9B5E625961B5C53E651CA /* ImageUtils.swift in Sources */,
+				CBA306EA27A910256F5C1AA0F886A0B4 /* UIViewContoller+Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E7899A10DB827DD382F7617FDB06AE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -591,21 +617,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51E4B9CA887D3A6AEFE8CF34ADFDFA63 /* Sources */ = {
+		D7CDA9B361463EBE2BE314A8C0ECB488 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92D0500EE8F4E934EBC3E39EB6D13D41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EA992C645A172EB73323465D1E25423 /* CamMap-dummy.m in Sources */,
-				451CDC959FB420253ECDF191C3B0D295 /* CamMapViewController.swift in Sources */,
-				FD0303EF52609CDD2E2DC411AC32DF27 /* ImageUtils.swift in Sources */,
-				8B3F7A843F59AB45CC0BFE0C81652F21 /* UIViewContoller+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,37 +641,21 @@
 			target = A1EEEAD72E9053A471132D36082D5CBC /* SnapKit */;
 			targetProxy = 5E42559227736C38EDBC86261049AEB9 /* PBXContainerItemProxy */;
 		};
-		DE9EC7F16E98385C7390A29EB3EFDBDD /* PBXTargetDependency */ = {
+		B733AF43F2466C9C9F14B18F94EE182B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CamMap-CamMap";
-			target = 4771FC2D02E446FEE00EC6C064E80BBB /* CamMap-CamMap */;
-			targetProxy = 13E24D8B9DA342CE806E5679EC612A7A /* PBXContainerItemProxy */;
+			target = 2E2EB1ECFCB05F867C94D8C59F65D1A3 /* CamMap-CamMap */;
+			targetProxy = 36157AD08448765477C98044C3516581 /* PBXContainerItemProxy */;
 		};
 		E05BC948B1C09CFA0691637A385F1BBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CamMap;
-			target = 166E6AA8EC97445A134A2FCB57AEC521 /* CamMap */;
+			target = EF1191501BE2593DC9210216FE78EAFB /* CamMap */;
 			targetProxy = ADBB40186D79D6F60A1ABDCDB34EDF44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		09A8485C9194E5C4D775BAE89861453D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8800A0BD81B3B82A397DCD1B7D369CEB /* CamMap.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CamMap";
-				INFOPLIST_FILE = "Target Support Files/CamMap/ResourceBundle-CamMap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = CamMap;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		199106E48083911F966C33272EE1C473 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11084A6BA20780B0A92EE054D45AD2B7 /* SnapKit.xcconfig */;
@@ -728,9 +727,9 @@
 			};
 			name = Release;
 		};
-		2FCD71791051423AFF3BA3C3A5EE0BB1 /* Debug */ = {
+		79F480E34376D724FE863388C7D13001 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8800A0BD81B3B82A397DCD1B7D369CEB /* CamMap.xcconfig */;
+			baseConfigurationReference = 1FEA3D678F53C63E87814B6D015949FF /* CamMap.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CamMap";
@@ -742,7 +741,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		8DFC9796FA9E6BCF680E1E0B1780DD0D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -845,9 +844,25 @@
 			};
 			name = Release;
 		};
-		A04EA6A8ACB5C66BD33ADC8B4F88B4D4 /* Debug */ = {
+		A639EFE88F870BA46DD25E77D2E6ECE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8800A0BD81B3B82A397DCD1B7D369CEB /* CamMap.xcconfig */;
+			baseConfigurationReference = 1FEA3D678F53C63E87814B6D015949FF /* CamMap.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CamMap";
+				INFOPLIST_FILE = "Target Support Files/CamMap/ResourceBundle-CamMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = CamMap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BA7CC11FD35459CF2F4D4FC5611687E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FEA3D678F53C63E87814B6D015949FF /* CamMap.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -876,10 +891,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		E19471FE7E209D0818DAFB22D649A6E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -947,9 +963,9 @@
 			};
 			name = Debug;
 		};
-		E6836C3B99C3A0355AF337D57AE73A68 /* Release */ = {
+		E6A55CA10CDEA0AF97C5F715260ACAE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8800A0BD81B3B82A397DCD1B7D369CEB /* CamMap.xcconfig */;
+			baseConfigurationReference = 1FEA3D678F53C63E87814B6D015949FF /* CamMap.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -978,11 +994,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		F235F165DBF4E1BCFF898C61A8D4A437 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1034,6 +1049,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		238C74DFFF4DCBBE3849202C03452320 /* Build configuration list for PBXNativeTarget "CamMap-CamMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A639EFE88F870BA46DD25E77D2E6ECE2 /* Debug */,
+				79F480E34376D724FE863388C7D13001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1043,11 +1067,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D75152A64873969AD71BA145C825064 /* Build configuration list for PBXNativeTarget "CamMap" */ = {
+		5B93AAB766B57A71617D094CD80D0D3A /* Build configuration list for PBXNativeTarget "CamMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A04EA6A8ACB5C66BD33ADC8B4F88B4D4 /* Debug */,
-				E6836C3B99C3A0355AF337D57AE73A68 /* Release */,
+				E6A55CA10CDEA0AF97C5F715260ACAE3 /* Debug */,
+				BA7CC11FD35459CF2F4D4FC5611687E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1057,15 +1081,6 @@
 			buildConfigurations = (
 				199106E48083911F966C33272EE1C473 /* Debug */,
 				1C54C28A5DE84D927B4FC54B86BB65B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83B7A9FCCBA83E21860B2A4E64F95FFC /* Build configuration list for PBXNativeTarget "CamMap-CamMap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2FCD71791051423AFF3BA3C3A5EE0BB1 /* Debug */,
-				09A8485C9194E5C4D775BAE89861453D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
