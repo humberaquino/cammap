@@ -2,6 +2,8 @@
 
 CamMap is a swift library that helps apps take photos and grab locations at the same time.
 
+![Sample screenshot](Images/ss1.jpeg?raw=true)
+
 ## Features 🚀
 
 - [x] Capture images as JPEG
