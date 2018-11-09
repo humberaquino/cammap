@@ -358,7 +358,9 @@ public class CamMapViewController: UIViewController {
     }
 
     func updateVideoPreviewLayerSize() {
-        videoPreviewLayer.frame = previewView.bounds
+        if let videoPreviewLayer = videoPreviewLayer {
+            videoPreviewLayer.frame = previewView.bounds
+        }
     }
 
     func markCompleteState() {
