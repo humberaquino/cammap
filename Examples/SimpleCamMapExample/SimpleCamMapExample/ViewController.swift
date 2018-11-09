@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import CamMap
+import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -19,24 +20,47 @@ class ViewController: UIViewController {
 
         openButton = UIButton(type: .system)
         openButton.setTitle("Open", for: .normal)
+        openButton.tintColor = UIColor.white
         openButton.addTarget(self, action: #selector(openCamMap(_:)), for: .touchUpInside)
 
         view.addSubview(openButton)
 
         openButton.snp.makeConstraints { make in
-            make.bottom.equalTo(self.view).offset(-50)
+            make.center.equalTo(self.view)
             make.width.equalTo(100)
             make.height.equalTo(40)
-            make.centerX.equalTo(self.view)
         }
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.darkGray
     }
 
     @objc
     func openCamMap(_: Any) {
         let vc = CamMapViewController()
-        present(vc, animated: true, completion: nil)
+        vc.delegate = self
+        present(vc, animated: false, completion: nil)
     }
 
 }
 
+extension ViewController: CamMapDelegate {
+    func camMapDidComplete(images: [UIImage], location: CLLocationCoordinate2D?) {
+        print("Completed. Got \(images.count) images and Location: \(String(describing: location))")
+        self.dismiss(animated: false, completion: nil)
+    }
+
+    func camMapDidCancel() {
+        print("Cancelled")
+        self.dismiss(animated: false, completion: nil)
+    }
+
+    func camMapPermissionFailure(type: PermType, details: String) {
+        print("Permission failure: \(details)")
+        self.dismiss(animated: false, completion: nil)
+    }
+
+    func camMapHadFailure(error: CamMapError) {
+        print("Unexpected error: \(error)")
+        self.dismiss(animated: false, completion: nil)
+    }
+
+}
