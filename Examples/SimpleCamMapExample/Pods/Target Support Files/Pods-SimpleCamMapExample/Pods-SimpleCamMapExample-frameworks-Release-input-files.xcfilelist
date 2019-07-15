@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-SimpleCamMapExample/Pods-SimpleCamMapExample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CamMap/CamMap.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

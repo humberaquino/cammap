@@ -1,9 +1,9 @@
 PODS:
-  - CamMap (0.0.1)
+  - CamMap (0.0.2)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
-  - CamMap (from `~/Documents/Libraries/CamMap`)
+  - CamMap (from `~/Projects/cammap`)
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
@@ -12,12 +12,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   CamMap:
-    :path: "~/Documents/Libraries/CamMap"
+    :path: "~/Projects/cammap"
 
 SPEC CHECKSUMS:
-  CamMap: 6e2f1f12e970ef27b87a9ec529831f7648bd3c1d
+  CamMap: 2350839d136f2af8826d52b245b37c8d386285c4
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 77ac3954afee46632cfae3be3681306bea38caea
+PODFILE CHECKSUM: fc620188e6f3d2c547c5fc676c36fc2d1ff45df9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.3
