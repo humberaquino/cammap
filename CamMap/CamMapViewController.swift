@@ -401,11 +401,11 @@ public class CamMapViewController: UIViewController {
 
 extension CamMapViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("Library cancelled")
+        print("Photo from library selection cancelled")
+        picker.dismiss(animated: true, completion: nil)
     }
 
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print("accepted!")
         let image = info[.originalImage] as! UIImage
         images.append(image)
         let selectedLocation = identifySelectedLocation()
