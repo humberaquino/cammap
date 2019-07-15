@@ -52,6 +52,9 @@ public class CamMapViewController: UIViewController {
     var capturePhotoOutput: AVCapturePhotoOutput!
     var images: [UIImage] = []
 
+    // Image picker
+    var imagePicker = UIImagePickerController()
+
     // Actions
     var captureButton: UIButton!
     var completeButton: UIButton!
@@ -188,6 +191,9 @@ public class CamMapViewController: UIViewController {
         // Buttons
         captureButton = UIButton(type: .custom)
         captureButton.addTarget(self, action: #selector(takePicture(_:)), for: .touchUpInside)
+        let longPressCapture = UILongPressGestureRecognizer(target: self, action: #selector(chooseCaptureOption(_:)))
+        longPressCapture.minimumPressDuration = 1.5
+        captureButton.addGestureRecognizer(longPressCapture)
 
         completeButton = UIButton(type: .system)
         completeButton.setTitle("Cancel", for: .normal)
@@ -317,6 +323,20 @@ public class CamMapViewController: UIViewController {
     }
 
     @objc
+    func chooseCaptureOption(_ recognizer: UILongPressGestureRecognizer) {
+        if recognizer.state == .began {
+            let chooseCaptureOptionAction = UIAlertController(title: "Choose source", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+            chooseCaptureOptionAction.addAction(UIAlertAction(title: "Image gallery", style: .default, handler: { (action) in
+                // Opens the photo gallery
+                self.openPhotoLibrary()
+            }))
+            chooseCaptureOptionAction.addAction(UIAlertAction(title: "Cancel", style:.cancel, handler: nil))
+
+            present(chooseCaptureOptionAction, animated: true, completion: nil)
+        }
+    }
+
+    @objc
     func completeAction(_: Any) {
         if images.count == 0 {
             delegate?.camMapDidCancel()
@@ -350,6 +370,17 @@ public class CamMapViewController: UIViewController {
 
     // MARK: - Utils
 
+    func openPhotoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+
     func identifySelectedLocation() -> CLLocationCoordinate2D {
         guard let selectedCoordinate = self.selectedCoordinate else {
             return mapView.centerCoordinate
@@ -365,6 +396,20 @@ public class CamMapViewController: UIViewController {
 
     func markCompleteState() {
         completeButton.setTitle("Done", for: .normal)
+    }
+}
+
+extension CamMapViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("Library cancelled")
+    }
+
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("accepted!")
+        let image = info[.originalImage] as! UIImage
+        images.append(image)
+        let selectedLocation = identifySelectedLocation()
+        delegate?.camMapDidComplete(images: images, location: selectedLocation)
     }
 }
 

@@ -11,12 +11,16 @@ import SnapKit
 import CamMap
 import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     var openButton: UIButton!
+    var locationManager: CLLocationManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
 
         openButton = UIButton(type: .system)
         openButton.setTitle("Open", for: .normal)
@@ -31,6 +35,12 @@ class ViewController: UIViewController {
             make.height.equalTo(40)
         }
         view.backgroundColor = UIColor.darkGray
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Request permission to use map
+        locationManager?.requestAlwaysAuthorization()
     }
 
     @objc

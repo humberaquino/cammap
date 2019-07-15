@@ -1,6 +1,6 @@
 {
   "name": "CamMap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "Take photos and grab location fast",
   "description": "CamMap aims at taking photos with location fast.",
   "homepage": "https://github.com/humberaquino/cammap",
@@ -17,10 +17,10 @@
   },
   "source": {
     "git": "https://github.com/humberaquino/cammap.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "source_files": "CamMap/**/*.{swift}",
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "resources": "CamMap/Media.xcassets",
   "ios": {
     "resource_bundles": {
@@ -30,5 +30,6 @@
   "frameworks": [
     "UIKit",
     "MapKit"
-  ]
+  ],
+  "swift_version": "4.2"
 }
